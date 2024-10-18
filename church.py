@@ -121,9 +121,10 @@ ctx.set_source_rgb(0, 0, 0)
 ctx.fill_preserve()
 ctx.set_source_rgb(1, 1, 1)
 ctx.stroke()
+
 # Center block window
 ctx.arc(195, 175, 10, math.radians(0), math.radians(360))
-ctx.set_source_rgb(1, 1, 1)
+ctx.set_source_rgb(1,1,1)
 ctx.fill()
 
 # Roof above the door
@@ -134,14 +135,32 @@ ctx.line_to(240, 210)
 ctx.line_to(195, 190)
 ctx.line_to(150, 210)
 ctx.close_path()
-ctx.set_source_rgb(0, 0, 0)
+ctx.set_source_rgb(0,0,0)
 ctx.fill_preserve()
-ctx.set_source_rgb(1, 1, 1)
+ctx.set_source_rgb(1,1,1)
 ctx.stroke()
+
+# Doors
+ctx.rectangle(160, 220, 34, 47)
+ctx.rectangle(196, 220, 34, 47)
+ctx.fill()
+
+
+ctx.move_to(160, 220)
+ctx.curve_to(170, 210, 180, 210, 194, 210)
+ctx.line_to(194, 220)
+ctx.close_path()
+ctx.fill()
+
+ctx.move_to(196, 210)
+ctx.curve_to(210, 210, 220, 210, 229, 220)
+ctx.line_to(196, 220)
+ctx.close_path()
+ctx.fill()
 
 # Top part
 ctx.rectangle(170, 100, 50, 50)
-ctx.set_source_rgb(0, 0, 0)
+ctx.set_source_rgb(0, 0, 1)
 ctx.set_line_width(1)
 ctx.fill_preserve()
 ctx.stroke()
@@ -151,11 +170,10 @@ ctx.line_to(180, 147)
 ctx.line_to(210, 147)
 ctx.line_to(210, 120)
 ctx.arc(195, 120, 15, math.pi, 0)
-ctx.set_source_rgb(1, 1, 1)
+ctx.set_source_rgb(1, 1, 1 )
 ctx.set_line_width(1)
 ctx.fill_preserve()
 ctx.stroke()
 
-# Save the drawing to an image file
-surface.write_to_png('chapel_blue.png')
 
+surface.write_to_png('chapel.png')
