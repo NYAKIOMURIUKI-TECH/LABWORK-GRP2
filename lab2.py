@@ -111,3 +111,4 @@ ctx.fill()
 
 # Save the result
 surface.write_to_png("house.png")
+print("3D two-storey house saved as '3D_house_fixed_platform.png'")
